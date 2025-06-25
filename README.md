@@ -30,9 +30,9 @@ def s_sentiment(sentence):
 s_sentiment(str_review)
 ```
 
-라벨링 기준 예시
+## KNU 라벨링 기준 예시
 ![KNU 예시](https://github.com/user-attachments/assets/a9bb2f5e-49b5-4604-99e5-9e98e29fc8a2)
-
+#### 한계: 단순 단어 매칭 기반이므로 정확도가 낮음
 ---
 
 ### 1.1 개선 라벨링 방식 (GEMMA 기반 분류기)
