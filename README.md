@@ -30,7 +30,7 @@ def s_sentiment(sentence):
 s_sentiment(str_review)
 ```
 
-📷 라벨링 기준 예시
+라벨링 기준 예시
 ![KNU 예시](https://github.com/user-attachments/assets/a9bb2f5e-49b5-4604-99e5-9e98e29fc8a2)
 
 ---
@@ -45,7 +45,7 @@ s_sentiment(str_review)
 
 ---
 
-### 1.2 🔧 데이터 전처리
+### 1.2 데이터 전처리
 
 #### 클래스 매핑 함수:
 
