@@ -119,10 +119,11 @@ class CustomBertForSequenceClassification(tf.keras.Model):
 
 ### BiLSTM 결과
 
-* **테스트 정확도**: `88.22%`
+* **테스트 정확도**: `77.80%`
 
 - **정확도 그래프**  
-  ![BiLSTM 정확도](https://github.com/user-attachments/assets/44e9c859-bb74-47a4-a680-4d2d89bfb6ef)
+  ![BiLSTM 정확도](https://github.com/user-attachments/assets/0f07b491-83b3-46d8-b16a-f480b4d0fe72)
+
 
 - **Confusion Matrix**  
   ![Confusion](https://github.com/user-attachments/assets/9d83b549-a680-4978-935a-5a629fc0a46e)
@@ -147,16 +148,16 @@ class CustomBertForSequenceClassification(tf.keras.Model):
 
 ---
 
-## 3. 결론 및 분석
+| 비교 항목             | BiLSTM     | BERT                    |
+| ----------------- | ---------- | ----------------------- |
+| 테스트 정확도           | 77.80%     | **87.34%**              |
+| Weighted F1-score | 0.7639     | **0.87**                |
+| 클래스 불균형 대응력       | 낮음 (편향 존재) | 상대적으로 우수                |
+| 문맥 이해             | 제한적        | **우수 (Transformer 기반)** |
+| 처리 속도             | 빠름         | 상대적으로 느림                |
+| 모델 크기/무게          | 가벼움        | 큼 (사전학습 파라미터 포함)        |
 
-| 항목                | BiLSTM     | BERT               |
-| ----------------- | ---------- | ------------------ |
-| 테스트 정확도           | 88.22%     | 87.34%             |
-| Weighted F1-score | 0.7639     | **0.87**           |
-| 과적합               | 있음         | 있음 (학습 정확도와 차이 존재) |
-| 학습 방식             | 임베딩 + LSTM | 사전학습 + Fine-tuning |
-| 처리 속도             | 빠름         | 상대적으로 느림           |
-| 문맥 이해             | 약함         | **강함**             |
 
 >  **결론**:
-> BERT 모델이 정확도는 약간 낮지만, F1-score 기준으로 더 **정밀하고 균형 잡힌 분류** 성능을 보였습니다.
+> BiLSTM은 속도와 단순 구조에서는 유리하지만, 정확도 및 F1-score 측면에서 부족함
+> BERT는 정밀한 분류가 필요한 실서비스에서는 훨씬 신뢰도가 높음
