@@ -159,4 +159,4 @@ class CustomBertForSequenceClassification(tf.keras.Model):
 | 문맥 이해             | 약함         | **강함**             |
 
 >  **결론**:
-> BERT 모델이 정확도는 약간 낮지만, F1-score 기준으로 더 **정밀하고 균형 잡힌 분류** 성능을 보였습니다. 특히 **중립 클래스**나 **경계 상황에서의 표현 해석력**은 BERT가 우수합니다.
+> BERT 모델이 정확도는 약간 낮지만, F1-score 기준으로 더 **정밀하고 균형 잡힌 분류** 성능을 보였습니다.
